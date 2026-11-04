@@ -23,11 +23,6 @@ jobs:
         run: |
           echo "Intento imprimir la llave: $LUNARIA_API_KEY"
           echo "La llave tiene ${#LUNARIA_API_KEY} caracteres"
-      - name: Prueba de autorizacion
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh label create seguridad --repo ${{ github.repository }} --color FF6B6B
   
 
   desplegar:
